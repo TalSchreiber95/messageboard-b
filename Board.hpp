@@ -1,5 +1,4 @@
 #include <string>
-// #include <vector>
 #include <map>
 #include "Direction.hpp"
 /*
@@ -15,14 +14,14 @@ struct defChar{
 namespace ariel {
     class Board {
         map<uint,map<uint,defChar>> board;
-        bool flag;
+        bool isFirstCheck;
         uint min_col;
         uint min_row; 
         uint max_col;
         uint max_row;
     public:
         Board() {
-            flag=true;// Created due to issues with INT16_MAX value that is 127 insted of MaxInt that should be.
+            isFirstCheck=true;// Created due to issues with INT16_MAX value that is 127 insted of MaxInt that should be.
             min_col=0;//INT16_MAX;
             min_row=0;//INT16_MAX; 
             max_col=0;

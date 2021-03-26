@@ -2,7 +2,7 @@
 #include "Board.hpp"
 /*
     Board.cpp.
-    Author: Tell Schreiber.
+    Author: Tal Schreiber.
 */
 using namespace std;
 
@@ -10,8 +10,8 @@ namespace ariel {
  void Board::post(uint row, uint col, Direction direction, string message) 
  {
         uint len=message.length();
-        if(this->flag){
-            this->flag=false;
+        if(this->isFirstCheck){
+            this->isFirstCheck=false;
             this->min_col=col;
             this->min_row=row;
         }
